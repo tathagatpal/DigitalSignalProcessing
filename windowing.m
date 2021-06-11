@@ -1,3 +1,6 @@
+%Implementation of Hamming's and Hanning's Window 
+%Shown the effect of windowing on a signal.
+
 ts = 1/50; %Sampling time
 t = -10 : ts : 10; 
 x =  sin(2*pi*15*t); %A sine wave with f = 15 Hz
