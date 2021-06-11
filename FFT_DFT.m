@@ -1,3 +1,5 @@
+#CODE FOR DFT, IDFT and Radix-2 FFT 
+
 n = 0:1:7; %FFT at 8 points
 ts = 1/8000; %Sampling freq = 1/ts = 8000 Hz
 n1 = 0:ts:7;
@@ -36,7 +38,7 @@ subplot(2,1,2);
 plot(n, x_n);
 title('Original signal x_n');
 
-
+#Function for DFT
 function [y1] = DFT(x,num)
 x_m = zeros(1, num);
     for m = 1:num
@@ -48,6 +50,7 @@ x_m = zeros(1, num);
 y1 = (x_m);
 end
 
+#Function for IDFT
 function [y] = IDFT(x, num)
 x_n = zeros(1, num);
     for m = 1:num
@@ -59,6 +62,7 @@ x_n = zeros(1, num);
 y = x_n;
 end
 
+#Function for Radix-2 FFT
 function [y] = FFT(x) 
 p=nextpow2(length(x));            % checking the size of the input array
 x=[x zeros(1,(2^p)-length(x))];   % making a zero array 
